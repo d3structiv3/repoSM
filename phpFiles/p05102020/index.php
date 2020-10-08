@@ -27,7 +27,8 @@
                 "Programacion"=>8.5, 
                 "Base de datos"=>9.4,
                 "Software a la medida"=>10.0,
-                "Inteligencia artificial"=>9.0
+                "Inteligencia artificial"=>9.0,
+                "Desarrollo WEB II" =>7.0,
             );
             $total=sizeof($materias);
             $acum=0;
