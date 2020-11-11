@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mt-3">Calculadora de Bayes</h2>
+        <div class="d-flex mt-3">
+            
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Pr(A1):</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Pr(A1):"
+                        aria-describedby="inputGroup-sizing-sm" id="A1" onchange="sumar(this.value);">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Pr(A2):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="Pr(A2):"
+                        aria-describedby="inputGroup-sizing-sm" id="A2" onchange="sumar(this.value);">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Pr(A3):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="Pr(A3):"
+                        aria-describedby="inputGroup-sizing-sm" id="A3" onchange="sumar(this.value);">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Pr(A4):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="Pr(A4):"
+                        aria-describedby="inputGroup-sizing-sm" id="A4" onchange="sumar(this.value);">
+                </div>
+                <div class="alert alert-primary" >
+                    La suma debe ser 1 actualmente tines <span id="suma"></span>
+                </div>
+                <button onclick="calcular('verde')" id="btn1" disabled='true' class="btn btn-success">Calcular Pr(Ai/B)</button>
+                <button onclick="calcular('rojo')" id= "btn2" disabled='true' class="btn btn-danger">Calcular Pr(Ai/noB)</button>
+            </div>
+            <div class="col">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">P(D/A1):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="P(D/A1):"
+                        aria-describedby="inputGroup-sizing-sm" id="DA1">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">P(D/A2):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="P(D/A2):"
+                        aria-describedby="inputGroup-sizing-sm" id="DA2">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">P(D/A3):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="P(D/A1):"
+                        aria-describedby="inputGroup-sizing-sm" id="DA3">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">P(D/A4):</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="P(D/A4):"
+                        aria-describedby="inputGroup-sizing-sm" id="DA4">
+                </div>
+              
+            </div>
+            <div class="col" id="resultados">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="msj">=</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="="
+                        aria-describedby="inputGroup-sizing-sm" id="R1" disabled>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="msj1">=</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="="
+                        aria-describedby="inputGroup-sizing-sm" id="R2" disabled>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="msj2">=</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="="
+                        aria-describedby="inputGroup-sizing-sm" id="R3" disabled>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="msj3">=</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="="
+                        aria-describedby="inputGroup-sizing-sm" id="R4" disabled>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
