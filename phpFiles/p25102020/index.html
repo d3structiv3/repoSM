@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Reglas</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4 class="text-center p-3">Sintaxis de las reglas de producción</h4>
+        <div class="form">
+    
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="valorP">Seleccione valor para p</label>
+                        <select class="form-control" id="valorP" name="valP">
+                            <option value="V">V</option>
+                            <option value="F">F</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="valorQ">Seleccione valor para q</label>
+                        <select class="form-control" id="valorQ" name="valQ">
+                            <option value="V">V</option>
+                            <option value="F">F</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="valorOpe">Seleccione la operacion</label>
+                        <select class="form-control" id="valorOpe" name="operacion">
+                            <option value="1">La conjuncon p ^ q</option>
+                            <option value="2">La disyuncion p v q</option>
+                            <option value="3">El condicional p ↦ q</option>
+                            <option value="4">El bicindicional p ↔ q </option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark " class="col-md-4" onclick="calcular()">Calcular</button>
+                <div class="text-center">
+                    <h4>Resultado</h4>
+                    <div id="resultado">
+                        
+                    </div>
+                </div>
+
+               <div class="text-center">
+                    <div class="table">
+                        <h6>Negacion</h6>
+                        <table class="table table-sm">
+                            <thead class="thead-dark">
+                                <th>p</th>
+                                <th>~p</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V</td>
+                                    <td>F</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>V   </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+               </div>
+        </div>
+    </div>
+</body>
+
+<script src="app.js"></script>
+</html>
